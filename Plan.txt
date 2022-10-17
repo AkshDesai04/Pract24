@@ -1,0 +1,15 @@
+Blog Website
+Databases: 1
+	Tables: 2
+		Login
+			ID
+			Pass
+		Posts
+			Date
+			Time
+			Title
+			Author’s ID
+			Post ID
+Write to login table on signup
+Session Login save
+
