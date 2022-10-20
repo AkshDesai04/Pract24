@@ -8,8 +8,11 @@ Databases: 1
 			Date
 			Time
 			Title
-			Author’s ID
+			Author ID
 			Post ID
 Write to login table on signup
 Session Login save
+
+
+
 

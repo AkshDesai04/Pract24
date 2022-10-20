@@ -5,13 +5,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <link rel="stylesheet" type"text/css" href="Style.css"
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <h1>Hello</h1>
-        </div>
+    <div>
+        <asp:Label runat = "server">Hello there!</asp:Label>
+        <asp:Label runat = "server">Let's Get Started!</asp:Label><br/>
+        <asp:Button ID="login" runat="server" Text="LogIn" />
+        <asp:Button ID="signup" runat="server" Text="SignUp" />
+    </div>
     </form>
 </body>
 </html>
