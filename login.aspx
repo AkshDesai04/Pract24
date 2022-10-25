@@ -15,6 +15,9 @@
             <p align="center">Password:<asp:TextBox ID="TextBox2" runat="server" TextMode="Password"></asp:TextBox>
             </p>
             <p align="center">
+                <asp:CheckBox ID="CheckBox1" runat="server" Text="Remember Me"/>
+            </p>
+            <p align="center">
                 <asp:Button ID="Button1" runat="server" Text="Submit" />
             </p>
         </div>

@@ -2,6 +2,9 @@
 
 Public Class login
     Inherits System.Web.UI.Page
+
+    Dim UserCookie As New HttpCookie("LoggedInUser")
+
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim con As New SqlConnection
         con.ConnectionString = "Data Source=CRUNCHER;Initial Catalog=Pract24;User ID=sa;Password=123456"
@@ -11,18 +14,31 @@ Public Class login
         Dim ds As New DataSet
         ad.Fill(ds)
         If ds.Tables(0).Rows.Count > 0 Then
-            'Code If User is found
             Dim sql As String = "select Pass from Auth where UserID = '" & TextBox1.Text & "'"
             Dim cmd As New SqlCommand(sql, con)
             Dim DB_Pass As String = Convert.ToString(cmd.ExecuteScalar)
             If TextBox2.Text.Equals(DB_Pass) Then
-                Response.Write("login Successful")
+                'Code If Password is corrent
+                If CheckBox1.Checked = True Then
+                    'Code If Remember Me is selected
+                    Try
+                        Dim UserCookie As New HttpCookie("LoggedInUser")
+                    Catch ex As Exception
+                        'Cookie Already Exists
+                    End Try
+                    UserCookie.Values("LoggedInUser") = TextBox1.Text
+                Else
+                    'Code If Remember Me is not selected
+                    UserCookie.Expires = DateTime.Now
+                    Session("LoggedInUser") = TextBox1.Text
+                End If
+                Response.Redirect("Blogs.aspx")
             Else
-                Response.Write("login UNSuccessful")
+                'Code If Password is incorrect
+                MsgBox("Invalid ID or Password. Please try again")
             End If
         Else
-            'Code If User is not found
-            Response.Write("User Not Found")
+            MsgBox("User Not Found")
         End If
         con.Close()
     End Sub
