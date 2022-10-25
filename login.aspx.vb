@@ -3,8 +3,6 @@
 Public Class login
     Inherits System.Web.UI.Page
 
-    Dim UserCookie As New HttpCookie("LoggedInUser")
-
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim con As New SqlConnection
         con.ConnectionString = "Data Source=CRUNCHER;Initial Catalog=Pract24;User ID=sa;Password=123456"
@@ -21,15 +19,11 @@ Public Class login
                 'Code If Password is corrent
                 If CheckBox1.Checked = True Then
                     'Code If Remember Me is selected
-                    Try
-                        Dim UserCookie As New HttpCookie("LoggedInUser")
-                    Catch ex As Exception
-                        'Cookie Already Exists
-                    End Try
-                    UserCookie.Values("LoggedInUser") = TextBox1.Text
+                    'Creating Cookie
+                    Response.Cookies("LoggedInUser").Value = TextBox1.Text
                 Else
                     'Code If Remember Me is not selected
-                    UserCookie.Expires = DateTime.Now
+                    Response.Cookies("LoggedInUser").Expires = DateTime.Now
                     Session("LoggedInUser") = TextBox1.Text
                 End If
                 Response.Redirect("Blogs.aspx")

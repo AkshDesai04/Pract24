@@ -5,8 +5,8 @@
             Label1.Text = "Permanent user: " & Request.Cookies("LoggedInUser").Value
         Catch ex As Exception
             Try
-                Label1.Text = "Temparory User: " & Session("LoggedInUser").Value
-            Catch ex1 As Exception
+                Label1.Text = "Temparory User: " & Session("LoggedInUser").ToString
+            Catch exc As Exception
                 Response.Write("Some Error Occured")
             End Try
         End Try
