@@ -16,7 +16,7 @@ Public Class Blogs
         Dim con As New SqlConnection
         con.ConnectionString = "Data Source=CRUNCHER;Initial Catalog=Pract24;User ID=sa;Password=123456"
         con.Open()
-        Dim ad As New SqlDataAdapter("select * from Posts", con)
+        Dim ad As New SqlDataAdapter("select * from Post", con)
         Dim ds As New DataSet
         ad.Fill(ds)
         Dim dv As DataView
