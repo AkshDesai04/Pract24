@@ -7,26 +7,23 @@ Public Class login
         con.ConnectionString = "Data Source=CRUNCHER;Initial Catalog=Pract24;User ID=sa;Password=123456"
         con.Open()
 
-        Dim sql As String = "select pass from Auth where UserID = '" & TextBox1.Text & "'"
-        Dim cmd As New SqlCommand(sql, con)
-        Dim pass As String = Convert.ToString(cmd.ExecuteScalar)
-
-        If pass.Equals("") Then
+        Dim ad As New SqlDataAdapter("select * from Auth where UserID='" & TextBox1.Text & "'", con)
+        Dim ds As New DataSet
+        ad.Fill(ds)
+        If ds.Tables(0).Rows.Count > 0 Then
+            'Code If User is found
+            Dim sql As String = "select Pass from Auth where UserID = '" & TextBox1.Text & "'"
+            Dim cmd As New SqlCommand(sql, con)
+            Dim DB_Pass As String = Convert.ToString(cmd.ExecuteScalar)
+            If TextBox2.Text.Equals(DB_Pass) Then
+                Response.Write("login Successful")
+            Else
+                Response.Write("login UNSuccessful")
+            End If
+        Else
+            'Code If User is not found
             Response.Write("User Not Found")
         End If
-
-        If TextBox1.Equals("") Then
-            Response.Write("Please Enter a user name")
-        End If
-
-        If TextBox2.Equals("") Then
-            Response.Write("Please Enter a password")
-        End If
-
-        If pass.Equals(TextBox2.Text) Then
-            Response.Write("ok")
-        Else
-            Response.Write("not ok")
-        End If
+        con.Close()
     End Sub
 End Class
