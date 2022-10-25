@@ -85,12 +85,14 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Blogs.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="index.aspx" />
     <Content Include="login.aspx" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="signup.aspx" />
     <Content Include="Style.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -101,6 +103,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Blogs.aspx.designer.vb">
+      <DependentUpon>Blogs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blogs.aspx.vb">
+      <DependentUpon>Blogs.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Default.aspx.vb">
       <SubType>ASPXCodeBehind</SubType>
       <DependentUpon>Default.aspx</DependentUpon>
@@ -140,6 +149,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="signup.aspx.designer.vb">
+      <DependentUpon>signup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="signup.aspx.vb">
+      <DependentUpon>signup.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
