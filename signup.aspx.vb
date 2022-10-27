@@ -20,6 +20,8 @@ Public Class signup
             End If
         End If
         con.Close()
+
+        Response.Redirect("login.aspx")
     End Sub
 
     Protected Sub CustomValidator1_ServerValidate(source As Object, args As System.Web.UI.WebControls.ServerValidateEventArgs) Handles CustomValidator1.ServerValidate

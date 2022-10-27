@@ -35,5 +35,6 @@ Public Class CreateBlog
         Dim cmd As New SqlCommand("INSERT INTO Post VALUES ('" & PostID & "', '" & UserID & "', GETDATE(), '" & TextBox1.Text & "', '" & TextArea1.Value & "')", con)
         'Response.Write("INSERT INTO Post VALUES ('P000000001', '" & UserID & "', GETDATE(), '" & TextBox1.Text & "', '" & TextArea1.Value & "')")
         cmd.ExecuteNonQuery()
+        Response.Redirect("Blogs.aspx")
     End Sub
 End Class
