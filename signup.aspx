@@ -5,18 +5,32 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link type="text/css" href="Style.css" rel="Stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
+        <div class="image">
+
+        </div>
         <div>
-            <h2 align="center">Sign Up</h2>
-            <p align="center">Username:<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                <h2 style="top: 50px; position: absolute; height: 58px; left: 797px; top: 50px; font-family: 'Inter'; line-height: 58px; border-bottom: 5px solid #473BF0; color: #000000;">SignUp</h2>
+            <p align="center" style=" position: absolute;width: 157px;height: 39px;left: 682px;top: 170px;font-family: 'Inter';font-style: normal;font-weight: 500;font-size: 25px;line-height: 39px;color: #737272;">Username:
             </p>
-            <p align="center">Password:<asp:TextBox ID="TextBox2" runat="server" TextMode="Password"></asp:TextBox>
-            <p align="center">Confirm Password:<asp:TextBox ID="TextBox3" runat="server" TextMode="Password"></asp:TextBox>
+            <div class="signtxt1" style="position: absolute; width: 150px; height: 39px;left: 707px;top: 230px;">
+                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+            </div>
+            <p align="center" style="position: absolute;width: 150px;height: 39px;left: 682px;top: 240px;font-family: 'Inter';font-style: normal;font-weight: 500;font-size: 25px;line-height: 39px;color: #777777;">Password:
+             </p>
+            <div class="signtxt2" style="position: absolute; width: 150px; height: 39px; left: 707px; top: 300px;">
+                <asp:TextBox ID="TextBox2" runat="server" TextMode="Password"></asp:TextBox>
+            </div>
+            <p align="center" style="position: absolute; height: 39px; left: 707px; top: 310px; font-family: 'Inter'; font-style: normal; font-weight: 500; font-size: 25px; line-height: 39px; color: #737272">Confirm Password:
             </p>
+            <div class="signtx3" style="position: absolute; width: 150px; height: 39px; left: 707px; top: 370px;">
+                <asp:TextBox ID="TextBox3" runat="server" TextMode="Password"></asp:TextBox>
+            </div>
             <p align="center">
-                <asp:Button ID="Button1" runat="server" Text="SignUp" />
+                <asp:Button ID="Button1" runat="server" Text="SignUp" Style="border-radius:15px;padding:5px;width:100px;font-size:20px;margin-top:400px;margin-left:400px" BackColor="#473BF0" BorderColor="#473BF0" BorderStyle="Solid" BorderWidth="4px" ForeColor="White"/>
             </p>
             <p align="center">
                 <asp:CustomValidator ID="CustomValidator1" runat="server" 

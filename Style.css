@@ -1,1 +1,98 @@
-﻿
+﻿body {
+    margin:0;
+    padding:0;
+    /*background-image: url('https://www.fotor.com/blog/wp-content/uploads/2020/05/old-photo-1024x576.png');*/
+}
+.index {
+    background-image: url('https://www.fotor.com/blog/wp-content/uploads/2020/05/old-photo-1024x576.png');
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 1280px;
+    height: 615px;
+}
+.image {
+    background-image: url('https://www.fotor.com/blog/wp-content/uploads/2020/05/old-photo-1024x576.png');
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 1024px;
+    height: 600px;
+    left: -300px;
+    top: -146px;
+    transform: rotate(103.11deg);
+}
+.para p {
+    position: absolute;
+    width: 157px;
+    height: 39px;
+    left: 682px;
+    top: 170px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 39px;
+    color: #737272;
+}
+.content p {
+    position: absolute;
+    width: 150px;
+    height: 39px;
+    left: 682px;
+    top: 240px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 39px;
+    color: #777777;
+}
+.t1 {
+    position: absolute;
+    width: 150px;
+    height: 39px;
+    left: 707px;
+    top: 230px;
+}
+.t2 {
+    position: absolute;
+    width: 150px;
+    height: 39px;
+    left: 707px;
+    top: 300px;
+}
+.check {
+    position: absolute;
+    width: 306px;
+    height: 24px;
+    left: 606px;
+    top: 310px;
+    font-family: 'Inter';
+    font-size: 15px;
+    line-height: 24px;
+    color: #0C30AE;
+}
+.sign h2{
+    font-size:45px;
+}
+.l1{
+    margin-top:210px;
+    margin-left:500px;
+    color:black;
+    font-size:35px;
+    font-weight:bold;
+    position:absolute;
+}
+.l2 {
+    margin-top: 300px;
+    margin-left: 450px;
+    color: black;
+    font-size: 35px;
+    position: absolute;
+    font-weight: bold;
+}
+.head h2{
+    color:black;
+    top:500px;
+    border-bottom:5px solid black;
+}

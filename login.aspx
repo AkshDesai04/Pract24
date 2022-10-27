@@ -5,21 +5,37 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link type="text/css" href="Style.css" rel="Stylesheet" />
 </head>
 <body>
     <form id="form2" runat="server">
+        <div class="image">
+
+        </div>
         <div>
-            <h2 align="center">Login page</h2>
-            <p align="center">Username:<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-            </p>
-            <p align="center">Password:<asp:TextBox ID="TextBox2" runat="server" TextMode="Password"></asp:TextBox>
-            </p>
-            <p align="center">
+             <h2 style="position: absolute; height: 58px; left: 797px; top: 50px; font-family: 'Inter'; line-height: 58px; border-bottom: 5px solid #473BF0; color: #000000;">Login</h2>
+            <div class="para">
+             <p align="center">Username:</p>
+                <div class="t1">
+                    <asp:TextBox ID="TextBox1" runat="server" ></asp:TextBox>
+                </div>
+            </div>
+            <div class="content">
+                <p align="center">Password:</p>
+                <div class="t2">
+                        <asp:TextBox ID="TextBox2" runat="server" TextMode="Password"></asp:TextBox>
+                </div>
+            </div>
+            <div class="check">
+                <p align="center">
                 <asp:CheckBox ID="CheckBox1" runat="server" Text="Remember Me"/>
             </p>
-            <p align="center">
-                <asp:Button ID="Button1" runat="server" Text="Submit" />
+            </div>
+            <div class="btn">
+                <p align="center">
+                <asp:Button ID="Button1" runat="server" Text="Login" Style="border-radius:15px;padding:5px;width:100px;font-size:20px;margin-top:360px;margin-left:400px" BackColor="#473BF0" BorderColor="#473BF0" BorderStyle="Solid" BorderWidth="4px" ForeColor="White" />
             </p>
+            </div>
         </div>
     </form>
 </body>
