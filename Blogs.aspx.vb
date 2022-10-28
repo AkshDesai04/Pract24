@@ -16,7 +16,7 @@ Public Class Blogs
         Dim con As New SqlConnection
         con.ConnectionString = "Data Source=CRUNCHER;Initial Catalog=Pract24;User ID=sa;Password=123456"
         con.Open()
-        Dim ad As New SqlDataAdapter("select * from Post", con)
+        Dim ad As New SqlDataAdapter("select * from Posts", con)
         Dim ds As New DataSet
         ad.Fill(ds)
         Dim dv As DataView
@@ -26,6 +26,10 @@ Public Class Blogs
         GridView1.DataBind()
         con.Close()
         DataBind()
+    End Sub
 
+    Protected Sub LogOut_Click(sender As Object, e As EventArgs) Handles LogOut.Click
+        Session.Abandon()
+        Response.Cookies("LoggedInUser").Expires = DateTime.Now
     End Sub
 End Class

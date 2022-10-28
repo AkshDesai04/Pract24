@@ -11,6 +11,7 @@
             <div>
                 <asp:Label ID="Label1" runat="server"/> 
                 <asp:Button ID="Button1" runat="server" Text="New Blog" PostBackUrl="~/CreateBlog.aspx" />
+                <asp:Button ID="LogOut" runat="server" Text = "Log Out" PostBackUrl="~/index.aspx"/>
                 <br/>
                 <asp:GridView ID="GridView1" runat="server"></asp:GridView>
 
