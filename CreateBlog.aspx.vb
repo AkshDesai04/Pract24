@@ -19,8 +19,9 @@ Public Class CreateBlog
                 End Try
             End Try
 
+            Dim dsn As String = "CRUNCHER"
             Dim con As New SqlConnection
-            con.ConnectionString = "Data Source=CRUNCHER;Initial Catalog=Pract24;User ID=sa;Password=123456"
+            con.ConnectionString = "Data Source=" & dsn & ";Initial Catalog=Pract24;User ID=sa;Password=123456"
             con.Open()
 
 
