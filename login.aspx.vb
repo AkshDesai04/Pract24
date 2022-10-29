@@ -4,8 +4,9 @@ Public Class login
     Inherits System.Web.UI.Page
 
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim dsn As String = "CRUNCHER"
         Dim con As New SqlConnection
-        con.ConnectionString = "Data Source=CRUNCHER;Initial Catalog=Pract24;User ID=sa;Password=123456"
+        con.ConnectionString = "Data Source=" & dsn & ";Initial Catalog=Pract24;User ID=sa;Password=123456"
         con.Open()
 
         Dim ad As New SqlDataAdapter("select * from Auth where UserID='" & TextBox1.Text & "'", con)

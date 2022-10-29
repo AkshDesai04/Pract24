@@ -13,10 +13,11 @@ Public Class Blogs
             End Try
         End Try
 
+        Dim dsn As String = "CRUNCHER"
         Dim con As New SqlConnection
-        con.ConnectionString = "Data Source=CRUNCHER;Initial Catalog=Pract24;User ID=sa;Password=123456"
+        con.ConnectionString = "Data Source=" & dsn & ";Initial Catalog=Pract24;User ID=sa;Password=123456"
         con.Open()
-        Dim ad As New SqlDataAdapter("select * from Post", con)
+        Dim ad As New SqlDataAdapter("select * from Posts", con)
         Dim ds As New DataSet
         ad.Fill(ds)
         Dim dv As DataView
@@ -26,5 +27,6 @@ Public Class Blogs
         GridView1.DataBind()
         con.Close()
         DataBind()
+
     End Sub
 End Class

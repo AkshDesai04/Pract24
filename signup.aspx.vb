@@ -2,8 +2,9 @@
 Public Class signup
     Inherits System.Web.UI.Page
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim dsn As String = "CRUNCHER"
         Dim con As New SqlConnection
-        con.ConnectionString = "Data Source=CRUNCHER;Initial Catalog=Pract24;User ID=sa;Password=123456"
+        con.ConnectionString = "Data Source=" & dsn & ";Initial Catalog=Pract24;User ID=sa;Password=123456"
         con.Open()
 
         Dim ad As New SqlDataAdapter("select * from Auth where UserID='" & TextBox1.Text & "'", con)
@@ -20,6 +21,8 @@ Public Class signup
             End If
         End If
         con.Close()
+
+        Response.Redirect("login.aspx")
     End Sub
 
     Protected Sub CustomValidator1_ServerValidate(source As Object, args As System.Web.UI.WebControls.ServerValidateEventArgs) Handles CustomValidator1.ServerValidate
