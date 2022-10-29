@@ -13,7 +13,7 @@
 
         </div>
         <div>
-             <h2 style="position: absolute; height: 58px; left: 797px; top: 50px; font-family: 'Inter'; line-height: 58px; border-bottom: 5px solid #473BF0; color: #000000;">Login</h2>
+             <h2 style="position: absolute; height: 58px; left: 797px; top: 50px; font-family: 'Inter'; line-height: 58px; border-bottom: 4px solid #473BF0; color: #000000; font-size:50px">Login</h2>
             <div class="para">
              <p align="center">Username:</p>
                 <div class="t1">

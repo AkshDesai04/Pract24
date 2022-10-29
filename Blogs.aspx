@@ -5,15 +5,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head runat="server">
         <title></title>
+        <link type="text/css" href="Style.css" rel="Stylesheet" />
     </head>
     <body>
         <form id="form1" runat="server">
             <div>
-                <asp:Label ID="Label1" runat="server"/> 
+                <div class="label1">
+                    <asp:Label ID="Label1" runat="server" text="Hey There"/> 
+                </div>
+                
                 <asp:Button ID="Button1" runat="server" Text="New Blog" PostBackUrl="~/CreateBlog.aspx" />
                 <br/>
                 <asp:GridView ID="GridView1" runat="server"></asp:GridView>
-
             </div>
         </form>
     </body>
