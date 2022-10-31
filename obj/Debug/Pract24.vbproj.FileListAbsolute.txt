@@ -17,6 +17,3 @@ C:\Users\prana\source\repos\Pract24\obj\Debug\Pract24.vbproj.CoreCompileInputs.c
 C:\Users\prana\source\repos\Pract24\obj\Debug\Pract24.dll
 C:\Users\prana\source\repos\Pract24\obj\Debug\Pract24.xml
 C:\Users\prana\source\repos\Pract24\obj\Debug\Pract24.pdb
-C:\Users\Aksh Desai\Documents\Visual Studio 2010\Projects\Pract24\Pract24\bin\Pract24.dll.config
-C:\Users\Aksh Desai\Documents\Visual Studio 2010\Projects\Pract24\Pract24\obj\Debug\Pract24.vbproj.AssemblyReference.cache
-C:\Users\Aksh Desai\Documents\Visual Studio 2010\Projects\Pract24\Pract24\obj\Debug\Pract24.vbproj.CoreCompileInputs.cache
