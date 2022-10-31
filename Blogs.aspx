@@ -5,6 +5,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head runat="server">
         <title></title>
+        <script language="vbscript">
+            Protected Sub delFunc(sender As Object, e As CommandEventArgs)
+                Response.Write(ID)
+            End Sub
+        </script>
     </head>
     <body>
         <form id="form1" runat="server">
@@ -16,6 +21,7 @@
             <br/>
             <div> <%--Body Div--%>
                 <%--<asp:GridView ID="GridView1" runat="server"></asp:GridView>--%>
+                <asp:PlaceHolder ID="bodyPH" runat="server" />
             </div>
         </form>
     </body>
