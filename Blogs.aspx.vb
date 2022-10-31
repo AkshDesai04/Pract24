@@ -1,4 +1,6 @@
-﻿Imports System.Data.SqlClient
+﻿Option Strict On
+Option Explicit On
+Imports System.Data.SqlClient
 
 Public Class Blogs
     Inherits System.Web.UI.Page
@@ -6,32 +8,36 @@ Public Class Blogs
         Dim LIU As String = ""
         Dim LIS As String = ""
         Try
-            'LIU = Request.Cookies("LoggedInUser").Value
+            LIU = Request.Cookies("LoggedInUser").Value
             LIS = "Permanent user: "
-            Label1.Text = "Permanent user: " & Request.Cookies("LoggedInUser").Value
         Catch ex As Exception
             Try
-                ' LIU = Session("LoggedInUser").ToString
+                LIU = Session("LoggedInUser").ToString
                 LIS = "Temparory User: "
             Catch exc As Exception
                 Response.Write("Some Error Occured")
             End Try
         End Try
 
-        Dim dsn As String = "CRUNCHER"
+        Label1.Text = LIS & LIU
+
+        If LIU = "admin" Then
+            Button2.Visible = True
+        End If
+
+        Dim dsn As String = "PRANALI-PC\SQLEXPRESS"
         Dim con As New SqlConnection
-        con.ConnectionString = "Data Source=PRANALI-PC\SQLEXPRESS;Initial Catalog=Pract24;User ID=sa;Password=123456"
+        con.ConnectionString = "Data Source=" & dsn & ";Initial Catalog=Pract24;User ID=sa;Password=123456"
         con.Open()
-        Dim ad As New SqlDataAdapter("select * from Post", con)
-        Dim ds As New DataSet
-        ad.Fill(ds)
-        Dim dv As DataView
-        dv = New DataView(ds.Tables(0))
-        dv.Sort = "PostID"
-        GridView1.DataSource = dv
-        GridView1.DataBind()
-        con.Close()
-        DataBind()
+        Dim sql As String = "select * from Post order by PostID ASC"
+        Dim rs As New SqlCommand(sql, con)
+        Dim rd As SqlDataReader = rs.ExecuteReader
+
+        'While rd.Read()
+        'PostTitle.Text = rd("PostTitle").ToString()
+        'PostContent.Text = rd("PostContent")
+        'PostOwner.Text = LIU
+        'End While
 
     End Sub
 End Class

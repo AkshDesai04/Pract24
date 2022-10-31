@@ -14,6 +14,15 @@ Option Explicit On
 Partial Public Class Blogs
 
     '''<summary>
+    '''Head1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Head1 As Global.System.Web.UI.HtmlControls.HtmlHead
+
+    '''<summary>
     '''form1 control.
     '''</summary>
     '''<remarks>
@@ -41,15 +50,6 @@ Partial Public Class Blogs
     Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''LogOut control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents LogOut As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
     '''ChngPass control.
     '''</summary>
     '''<remarks>
@@ -68,11 +68,47 @@ Partial Public Class Blogs
     Protected WithEvents Button2 As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''GridView1 control.
+    '''LogOut control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents GridView1 As Global.System.Web.UI.WebControls.GridView
+    Protected WithEvents LogOut As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Post control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Post As Global.System.Web.UI.WebControls.Panel
+
+    '''<summary>
+    '''PostTitle control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents PostTitle As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''PostOwner control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents PostOwner As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''PostContent control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents PostContent As Global.System.Web.UI.WebControls.Label
 End Class

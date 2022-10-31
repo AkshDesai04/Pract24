@@ -89,6 +89,15 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:Pract24.Blogs._Head1">
+<summary>
+Head1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:Pract24.Blogs._form1">
 <summary>
 form1 control.
@@ -116,15 +125,6 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:Pract24.Blogs._LogOut">
-<summary>
-LogOut control.
-</summary>
-<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member>
 <member name="F:Pract24.Blogs._ChngPass">
 <summary>
 ChngPass control.
@@ -143,9 +143,45 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:Pract24.Blogs._GridView1">
+<member name="F:Pract24.Blogs._LogOut">
 <summary>
-GridView1 control.
+LogOut control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Pract24.Blogs._Post">
+<summary>
+Post control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Pract24.Blogs._PostTitle">
+<summary>
+PostTitle control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Pract24.Blogs._PostOwner">
+<summary>
+PostOwner control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Pract24.Blogs._PostContent">
+<summary>
+PostContent control.
 </summary>
 <remarks>
 Auto-generated field.

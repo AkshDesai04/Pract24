@@ -20,7 +20,7 @@ Public Class ChangePass
         End Try
 
         Dim con As New SqlConnection
-        con.ConnectionString = "Data Source=CRUNCHER;Initial Catalog=Pract24;User ID=sa;Password=123456"
+        con.ConnectionString = "Data Source=PRANALI-PC\SQLEXPRESS;Initial Catalog=Pract24;User ID=sa;Password=123456"
         Dim readCmd As String = "select Pass from Auth where UserID = '" & LIU & "'"
         Dim changeCmd As String = "update Auth set Pass = '" & TextBox2.Text & "' where UserID = '" & LIU & "'"
 

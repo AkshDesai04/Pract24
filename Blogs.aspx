@@ -1,40 +1,75 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Blogs.aspx.vb" Inherits="Pract24.Blogs" %>
+﻿
+<%@ Page Language="vb" AutoEventWireup="false"  Inherits="Pract24.Blogs" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ Import Namespace="System.Data.SqlClient" %>
+<%
 
+%>
 <html xmlns="http://www.w3.org/1999/xhtml">
-    <head runat="server">
+    <head id="Head1" runat="server">
         <title></title>
         <link type="text/css" href="Style.css" rel="Stylesheet" />
     </head>
-    <body style="background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);">
+    <body style="background-color:lavenderblush">
         <form id="form1" runat="server">
             <div>
-                <div class="label1" style="position: absolute; width: 544px; height: 120px; left: 370px; top: 30px; font-family: 'Poppins'; font-style: normal; font-weight: 500; font-size: 45px; line-height: 96px; text-align: center; text-transform: capitalize; color: #000000;">
-                    <asp:Label ID="Label1" runat="server" text="Hey There"/> 
-                </div>
-                <div class="para1" style="position: absolute; width: 1295px; height: 76px; font-family: 'Poppins'; font-style: normal; font-weight: 500; font-size: 18px; line-height: 38px; text-align: center; text-transform: capitalize; color: #000000; top:90px">
-                    <p>I love writing about what’s happening across the globe and how it makes me feel by giving my take on it.</p>
-                </div>
-                <div class="cards" style="position: absolute; left: 160px; top: 240px;">
-                    &nbsp;</div>
-                <div class="cards" style="position: absolute; left: 550px; top: 240px;">
-                    &nbsp;</div>
-                <div class="cards" style="position: absolute; left: 930px; top: 240px;">
-                    &nbsp;</div>
-                <div>
-                    <asp:Button ID="Button1" runat="server" Text="New Blog" PostBackUrl="~/CreateBlog.aspx" Style="border-radius:15px; margin-top:170px; padding:5px;width:80px;font-size:15px;margin-left:600px;position:absolute" BackColor="#473BF0" BorderColor="#473BF0" BorderStyle="Solid" BorderWidth="4px" ForeColor="White"/>  <br />
-                <div>
-                  
-                </div>           
-                     <asp:Button ID="LogOut" runat="server" Text = "Log Out" PostBackUrl="~/index.aspx" Style="border-radius:15px; margin-top:1px; padding:5px;width:80px;font-size:15px;margin-left:1100px;position:absolute" BackColor="#473BF0" BorderColor="#473BF0" BorderStyle="Solid" BorderWidth="4px" ForeColor="White"/>
+                <% 
+                    Dim LIU As String = ""
+                    Dim LIS As String = ""
+                    Try
+                        LIU = Request.Cookies("LoggedInUser").Value
+                        LIS = "Permanent user: "
+                    Catch ex As Exception
+                        Try
+                            LIU = Session("LoggedInUser").ToString
+                            LIS = "Temparory User: "
+                        Catch exc As Exception
+                            Response.Write("Some Error Occured")
+                        End Try
+                    End Try
+
+                    Label1.Text = LIS & LIU
+
+                    If LIU = "admin" Then
+                        Button2.Visible = True
+                    End If %>
+                <div class="label1" style="font-size:20px;">
+                    <asp:Label ID="Label1" runat="server" text=""/> 
                 </div>
                 
-                <asp:Button ID="ChngPass" runat="server" Text="Change Password" PostBackUrl="~/ChangePass.aspx" />
+                <asp:Button ID="Button1" runat="server" Text="New Blog" PostBackUrl="~/CreateBlog.aspx" Style="border-radius:15px;padding:5px;font-size:16px;margin-left:74%;" BackColor="#473BF0" BorderColor="#473BF0" BorderStyle="Solid" BorderWidth="4px" ForeColor="White" />
+                <asp:Button ID="ChngPass" runat="server" Text="Change Password" PostBackUrl="~/ChangePass.aspx" Style="border-radius:15px;padding:5px;font-size:16px;" BackColor="#473BF0" BorderColor="#473BF0" BorderStyle="Solid" BorderWidth="4px" ForeColor="White" />
                 <asp:Button ID="Button2" runat="server" Text="Manage Accounts" PostBackUrl="~/AdminPanel.aspx" Visible = "false"/>
+                <asp:Button ID="LogOut" runat="server" Text = "Log Out" PostBackUrl="~/index.aspx" Style="border-radius:15px;padding:5px;font-size:16px;margin-top:-37px;margin-left:93.2%" BackColor="#473BF0" BorderColor="#473BF0" BorderStyle="Solid" BorderWidth="4px" ForeColor="White" />
                 <br/>
-                <asp:GridView ID="GridView1" runat="server"></asp:GridView>
+                <div class="posts" style="display:flex;flex-direction:column;align-items:center">
+                    <% 
+                        Dim dsn As String = "PRANALI-PC\SQLEXPRESS"
+                        Dim con As New SqlConnection
+                        con.ConnectionString = "Data Source=" & dsn & ";Initial Catalog=Pract24;User ID=sa;Password=123456"
+                        con.Open()
+                        Dim sql As String = "select * from Post order by PostID ASC"
+                        Dim rs As New SqlCommand(sql, con)
+                        Dim rd As SqlDataReader = rs.ExecuteReader
+                        While rd.Read()
+                            Dim PostTitle As String = Convert.ToString(rd("PostTitle"))
+                            Dim PostContent As String = Convert.ToString(rd("PostContent"))
+                    %>
+                    <div class="post" style="width: 80%; height: 200px; box-shadow: 0px 0px 10px rgba(0,0,0,.6); margin-top: 20px;border-radius:10px;padding:10px;">
+                        <div style="display:flex;justify-content:space-between;align-items:center;">
+                            <h3><% Response.Write(PostTitle) %></h3>
+                            <p><% Response.Write(LIU) %></p>
+                        </div>
+                        <p><% Response.Write(PostContent) %></p>
+                    </div>
+                    <%
+                        End While
+
+                    %>
+                </div>
             </div>
+            
         </form>
     </body>
 </html>
