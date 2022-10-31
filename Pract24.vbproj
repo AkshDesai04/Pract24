@@ -98,6 +98,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Blogs.aspx" />
+    <Content Include="ChangePass.aspx" />
     <Content Include="CreateBlog.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="index.aspx" />
@@ -121,6 +122,13 @@
     </Compile>
     <Compile Include="Blogs.aspx.vb">
       <DependentUpon>Blogs.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ChangePass.aspx.designer.vb">
+      <DependentUpon>ChangePass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePass.aspx.vb">
+      <DependentUpon>ChangePass.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="CreateBlog.aspx.designer.vb">
