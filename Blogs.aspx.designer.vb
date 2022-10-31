@@ -77,11 +77,11 @@ Partial Public Class Blogs
     Protected WithEvents LogOut As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''GridView1 control.
+    '''Panel1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents GridView1 As Global.System.Web.UI.WebControls.GridView
+    Protected WithEvents Panel1 As Global.System.Web.UI.WebControls.Panel
 End Class

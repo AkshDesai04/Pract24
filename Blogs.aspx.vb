@@ -27,16 +27,18 @@ Public Class Blogs
         Dim con As New SqlConnection
         con.ConnectionString = "Data Source=" & dsn & ";Initial Catalog=Pract24;User ID=sa;Password=123456"
         con.Open()
-        Dim ad As New SqlDataAdapter("select * from Posts", con)
-        Dim ds As New DataSet
-        ad.Fill(ds)
-        Dim dv As DataView
-        dv = New DataView(ds.Tables(0))
-        dv.Sort = "PostID"
-        GridView1.DataSource = dv
-        GridView1.DataBind()
-        con.Close()
-        DataBind()
+        Dim sql As String = "select * from Posts order by PostID ASC"
+        Dim rs As New SqlCommand(sql, con)
+        Dim rd As SqlDataReader = rs.ExecuteReader
 
+        While rd.Read()
+            Response.Write("<div class='PostDiv'>")
+            Response.Write("<h3 id = 'PTitle'>" & rd("PostTitle") & "</h3>")
+            Response.Write("<h5 id = 'UID'>" & rd("UserID") & "</h5>")
+            Response.Write("</br>")
+            Response.Write("<p id = 'PCont'>" & rd("PostContent") & "</p></br>")
+            Response.Write("</div>")
+            Response.Write("</br>")
+        End While
     End Sub
 End Class

@@ -135,9 +135,9 @@ LogOut control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:Pract24.Blogs.GridView1">
+</member><member name="F:Pract24.Blogs.Panel1">
 	<summary>
-GridView1 control.
+Panel1 control.
 </summary>
 	<remarks>
 Auto-generated field.
