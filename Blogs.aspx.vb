@@ -5,8 +5,12 @@ Public Class Blogs
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Dim LIU, LIUStatus As String
         Try
+<<<<<<< HEAD
             LIU = Request.Cookies("LoggedInUser").Value
             LIUStatus = "Permanent user: "
+=======
+            'Label1.Text = "Permanent user: " & Request.Cookies("LoggedInUser").Value
+>>>>>>> fe69d33cc46fc9ffe5d23d4579d9742c31864c9b
         Catch ex As Exception
             Try
                 LIU = Session("LoggedInUser").ToString
@@ -72,10 +76,12 @@ Public Class Blogs
 
         con.Close()
         DataBind()
-    End Sub
 
+<<<<<<< HEAD
     Protected Sub LogOut_Click(sender As Object, e As CommandEventArgs) Handles LogOut.Click
         Session.Abandon()
         Response.Cookies("LoggedInUser").Expires = DateTime.Now
+=======
+>>>>>>> fe69d33cc46fc9ffe5d23d4579d9742c31864c9b
     End Sub
 End Class

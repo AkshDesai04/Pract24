@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head runat="server">
         <title></title>
+<<<<<<< HEAD
         <script language="vbscript">
             Protected Sub delFunc(sender As Object, e As CommandEventArgs)
                 Response.Write(ID)
@@ -22,6 +23,21 @@
             <div> <%--Body Div--%>
                 <%--<asp:GridView ID="GridView1" runat="server"></asp:GridView>--%>
                 <asp:PlaceHolder ID="bodyPH" runat="server" />
+=======
+        <link type="text/css" href="Style.css" rel="Stylesheet" />
+    </head>
+    <body>
+        <form id="form1" runat="server">
+            <div>
+                <div class="label1">
+                    <asp:Label ID="Label1" runat="server" text="Hey There"/> 
+                </div>
+                
+                <asp:Button ID="Button1" runat="server" Text="New Blog" PostBackUrl="~/CreateBlog.aspx" />
+                <asp:Button ID="LogOut" runat="server" Text = "Log Out" PostBackUrl="~/index.aspx"/>
+                <br/>
+                <asp:GridView ID="GridView1" runat="server"></asp:GridView>
+>>>>>>> fe69d33cc46fc9ffe5d23d4579d9742c31864c9b
             </div>
         </form>
     </body>

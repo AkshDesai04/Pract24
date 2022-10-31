@@ -13,7 +13,7 @@
 
         </div>
         <div>
-                <h2 style="top: 50px; position: absolute; height: 58px; left: 797px; top: 50px; font-family: 'Inter'; line-height: 58px; border-bottom: 5px solid #473BF0; color: #000000;">SignUp</h2>
+                <h2 style="top: 50px; position: absolute; height: 58px; left: 797px; top: 50px; font-family: 'Inter'; line-height: 58px; border-bottom: 4px solid #473BF0; color: #000000;font-size:50px;" >Sign Up</h2>
             <p align="center" style=" position: absolute;width: 157px;height: 39px;left: 682px;top: 170px;font-family: 'Inter';font-style: normal;font-weight: 500;font-size: 25px;line-height: 39px;color: #737272;">Username:
             </p>
             <div class="signtxt1" style="position: absolute; width: 150px; height: 39px;left: 707px;top: 230px;">
