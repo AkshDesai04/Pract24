@@ -19,7 +19,7 @@ Public Class CreateBlog
                 End Try
             End Try
 
-            Dim dsn As String = "CRUNCHER"
+            Dim dsn As String = "PRANALI-PC\SQLEXPRESS"
             Dim con As New SqlConnection
             con.ConnectionString = "Data Source=" & dsn & ";Initial Catalog=Pract24;User ID=sa;Password=123456"
             con.Open()
@@ -28,7 +28,7 @@ Public Class CreateBlog
             Dim num As Integer
             Dim PostID As String
             Try
-                Dim cmd1 As New SqlCommand("Select MAX(PostID) from Posts", con)
+                Dim cmd1 As New SqlCommand("Select MAX(PostID) from Post", con)
                 PostID = Convert.ToString(cmd1.ExecuteScalar)
                 num = CInt(PostID.Substring(1)) + 1
                 PostID = "P"
@@ -40,7 +40,7 @@ Public Class CreateBlog
                 PostID = "P000000000"
             End Try
 
-            Dim cmd As New SqlCommand("INSERT INTO Posts VALUES ('" & PostID & "', '" & UserID & "', GETDATE(), '" & TextBox1.Text & "', '" & TextArea1.Value & "')", con)
+            Dim cmd As New SqlCommand("INSERT INTO Post VALUES ('" & PostID & "', '" & UserID & "', GETDATE(), '" & TextBox1.Text & "', '" & TextArea1.Value & "')", con)
             'Response.Write("INSERT INTO Posts VALUES ('P000000001', '" & UserID & "', GETDATE(), '" & TextBox1.Text & "', '" & TextArea1.Value & "')")
             cmd.ExecuteNonQuery()
             Response.Redirect("Blogs.aspx")

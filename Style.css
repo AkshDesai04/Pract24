@@ -96,18 +96,3 @@
     top:500px;
     border-bottom:5px solid black;
 }
-label1 {
-    position: absolute;
-    width: 544px;
-    height: 120px;
-    left: 448px;
-    top: 139px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 64px;
-    line-height: 96px;
-    text-align: center;
-    text-transform: capitalize;
-    color: #000000;
-}

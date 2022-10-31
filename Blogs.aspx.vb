@@ -4,7 +4,7 @@ Public Class Blogs
     Inherits System.Web.UI.Page
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Try
-            'Label1.Text = "Permanent user: " & Request.Cookies("LoggedInUser").Value
+            Label1.Text = "Permanent user: " & Request.Cookies("LoggedInUser").Value
         Catch ex As Exception
             Try
                 Label1.Text = "Temparory User: " & Session("LoggedInUser").ToString
@@ -13,11 +13,10 @@ Public Class Blogs
             End Try
         End Try
 
-        Dim dsn As String = "CRUNCHER"
         Dim con As New SqlConnection
-        con.ConnectionString = "Data Source=" & dsn & ";Initial Catalog=Pract24;User ID=sa;Password=123456"
+        con.ConnectionString = "Data Source=PRANALI-PC\SQLEXPRESS;Initial Catalog=Pract24;User ID=sa;Password=123456"
         con.Open()
-        Dim ad As New SqlDataAdapter("select * from Posts", con)
+        Dim ad As New SqlDataAdapter("select * from Post", con)
         Dim ds As New DataSet
         ad.Fill(ds)
         Dim dv As DataView
