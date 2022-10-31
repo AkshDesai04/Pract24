@@ -16,6 +16,7 @@
                 
                 <asp:Button ID="Button1" runat="server" Text="New Blog" PostBackUrl="~/CreateBlog.aspx" />
                 <asp:Button ID="ChngPass" runat="server" Text="Change Password" PostBackUrl="~/ChangePass.aspx" />
+                <asp:Button ID="Button2" runat="server" Text="Manage Accounts" PostBackUrl="~/AdminPanel.aspx" Visible = "false"/>
                 <asp:Button ID="LogOut" runat="server" Text = "Log Out" PostBackUrl="~/index.aspx"/>
                 <br/>
                 <asp:GridView ID="GridView1" runat="server"></asp:GridView>

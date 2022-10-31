@@ -97,6 +97,7 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminPanel.aspx" />
     <Content Include="Blogs.aspx" />
     <Content Include="ChangePass.aspx" />
     <Content Include="CreateBlog.aspx" />
@@ -117,6 +118,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminPanel.aspx.designer.vb">
+      <DependentUpon>AdminPanel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel.aspx.vb">
+      <DependentUpon>AdminPanel.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Blogs.aspx.designer.vb">
       <DependentUpon>Blogs.aspx</DependentUpon>
     </Compile>

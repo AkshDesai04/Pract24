@@ -6,7 +6,39 @@ Pract24
 </name>
 </assembly>
 <members>
-<member name="F:Pract24.ChangePass.form1">
+<member name="F:Pract24.AdminPanel.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Pract24.AdminPanel.TextBox1">
+	<summary>
+TextBox1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Pract24.AdminPanel.CheckBox1">
+	<summary>
+CheckBox1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Pract24.AdminPanel.DeleteButton">
+	<summary>
+DeleteButton control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Pract24.ChangePass.form1">
 	<summary>
 form1 control.
 </summary>
@@ -146,6 +178,14 @@ To modify move field declaration from designer file to code-behind file.
 </member><member name="F:Pract24.Blogs.ChngPass">
 	<summary>
 ChngPass control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Pract24.Blogs.Button2">
+	<summary>
+Button2 control.
 </summary>
 	<remarks>
 Auto-generated field.

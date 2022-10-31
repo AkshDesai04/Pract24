@@ -3,15 +3,25 @@
 Public Class Blogs
     Inherits System.Web.UI.Page
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        Dim LIU As String = ""
+        Dim LIS As String = ""
         Try
-            Label1.Text = "Permanent user: " & Request.Cookies("LoggedInUser").Value
+            LIU = Request.Cookies("LoggedInUser").Value
+            LIS = "Permanent user: "
         Catch ex As Exception
             Try
-                Label1.Text = "Temparory User: " & Session("LoggedInUser").ToString
+                LIU = Session("LoggedInUser").ToString
+                LIS = "Temparory User: "
             Catch exc As Exception
                 Response.Write("Some Error Occured")
             End Try
         End Try
+
+        Label1.Text = LIS & LIU
+
+        If LIU = "admin" Then
+            Button2.Visible = True
+        End If
 
         Dim dsn As String = "CRUNCHER"
         Dim con As New SqlConnection
