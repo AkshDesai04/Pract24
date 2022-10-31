@@ -38,6 +38,7 @@ Public Class Blogs
             Response.Write("</br>")
             Response.Write("<p id = 'PCont'>" & rd("PostContent") & "</p></br>")
             Response.Write("</div>")
+            Response.Write("<hr>")
             Response.Write("</br>")
         End While
     End Sub
