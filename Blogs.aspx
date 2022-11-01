@@ -45,11 +45,11 @@
                 <br/>
                 <div class="posts" style="display:flex;flex-direction:column;align-items:center">
                     <% 
-                        Dim dsn As String = "PRANALI-PC\SQLEXPRESS"
+                        Dim dsn As String = "CRUNCHER"
                         Dim con As New SqlConnection
                         con.ConnectionString = "Data Source=" & dsn & ";Initial Catalog=Pract24;User ID=sa;Password=123456"
                         con.Open()
-                        Dim sql As String = "select * from Post order by PostID ASC"
+                        Dim sql As String = "select * from Posts order by PostID ASC"
                         Dim rs As New SqlCommand(sql, con)
                         Dim rd As SqlDataReader = rs.ExecuteReader
                         While rd.Read()
@@ -59,7 +59,7 @@
                     <div class="post" style="width: 80%; height: 200px; box-shadow: 0px 0px 10px rgba(0,0,0,.6); margin-top: 20px;border-radius:10px;padding:10px;">
                         <div style="display:flex;justify-content:space-between;align-items:center;">
                             <h3><% Response.Write(PostTitle) %></h3>
-                            <p><% Response.Write(LIU) %></p>
+                            <p><% Response.Write(Convert.ToString(rd("UserID"))) %></p>
                         </div>
                         <p><% Response.Write(PostContent) %></p>
                     </div>

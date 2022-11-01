@@ -25,11 +25,11 @@ Public Class Blogs
             Button2.Visible = True
         End If
 
-        Dim dsn As String = "PRANALI-PC\SQLEXPRESS"
+        Dim dsn As String = "CRUNCHER"
         Dim con As New SqlConnection
         con.ConnectionString = "Data Source=" & dsn & ";Initial Catalog=Pract24;User ID=sa;Password=123456"
         con.Open()
-        Dim sql As String = "select * from Post order by PostID ASC"
+        Dim sql As String = "select * from Posts order by PostID ASC"
         Dim rs As New SqlCommand(sql, con)
         Dim rd As SqlDataReader = rs.ExecuteReader
 

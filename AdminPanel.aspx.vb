@@ -9,7 +9,7 @@ Public Class AdminPanel
 
     Protected Sub DeleteButton_Click(sender As Object, e As EventArgs) Handles DeleteButton.Click
         Dim con As New SqlConnection
-        con.ConnectionString = "Data Source=PRANALI-PC\SQLEXPRESS;Initial Catalog=Pract24;User ID=sa;Password=123456"
+        con.ConnectionString = "Data Source=CRUNCHER;Initial Catalog=Pract24;User ID=sa;Password=123456"
         Dim delUserCmd As String = "delete from Auth where UserID = '" & TextBox1.Text & "'"
         Dim delPostsCmd As String = "delete from Posts where UserID = '" & TextBox1.Text & "'"
 

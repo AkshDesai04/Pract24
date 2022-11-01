@@ -8,8 +8,8 @@
     position: absolute;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 1280px;
-    height: 615px;
+    width: 100%;
+    height: 100%;
 }
 .image {
     background-image: url('https://www.fotor.com/blog/wp-content/uploads/2020/05/old-photo-1024x576.png');
